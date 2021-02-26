@@ -3,6 +3,7 @@
 #include <utility>
 #include <algorithm>
 #include <cstdlib>
+#include <cassert>
 
 void Euler::get_new_edges()
 {
@@ -35,9 +36,8 @@ void Euler::get_new_edges()
 
 void Euler::setGraph(int n, int m, std::vector<std::pair<int, int>> matrix)
 {
-    count_vertex = n;
-    count_edges = m;
-    for (int i = 1; i <= count_edges; i++)
+    
+    for (int i = 0; i < count_vertex; i++)
     {
         int u = matrix[i].first;
         int v = matrix[i].second;

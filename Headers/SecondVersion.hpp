@@ -4,9 +4,9 @@
 class SecondVersion : public Euler
 {
 private:
-    int *ind;
+    std::vector<int> ind;
     void dfs(int v) override;
-
+    void resizeArraysAndVectors(TaskGenerator *);
 public:
     SecondVersion(TaskGenerator *);
     ~SecondVersion() = default;

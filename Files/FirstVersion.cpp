@@ -2,15 +2,18 @@
 
 FirstVersion::FirstVersion(TaskGenerator *newTask)
 {
-    /*
-    const int MAX_COUNT_VERTEX = 1e5 + 10;
-    int count_vertex, count_edges;
-    int deg[MAX_COUNT_VERTEX];
-    vector <edge> edges[MAX_COUNT_VERTEX];
-    int ind[MAX_COUNT_VERTEX], used[MAX_COUNT_VERTEX];
-    vector <int> euler;
-    */
+    resizeArraysAndVectors(newTask);
     setGraph(newTask->get_count_vertex(), newTask->get_count_edges(), newTask->getGraph());
+}
+
+void FirstVersion::resizeArraysAndVectors(TaskGenerator *task)
+{
+    const int MAX_COUNT_VERTEX = 5e5+10;
+    count_vertex = task->get_count_vertex();
+    count_edges = task->get_count_edges();
+    deg.resize(MAX_COUNT_VERTEX);
+    edges.resize(MAX_COUNT_VERTEX);
+    used.resize(MAX_COUNT_VERTEX);
 }
 
 std::vector<int> FirstVersion::solve()

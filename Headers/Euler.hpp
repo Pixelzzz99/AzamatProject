@@ -7,9 +7,9 @@ class Euler
 protected:
     int count_vertex;
     int count_edges;
-    int* deg;
+    std::vector<int> deg;
     std::vector<std::vector<Edge>> edges;
-    int* used;
+    std::vector<int> used;
     std::vector<int> euler;
     void get_new_edges();
     virtual void dfs(int v) = 0;

@@ -6,6 +6,7 @@ class FirstVersion : public Euler
 {
 private:
     void dfs(int v) override;
+    void resizeArraysAndVectors(TaskGenerator *);
 public:
     FirstVersion(TaskGenerator *);
     
